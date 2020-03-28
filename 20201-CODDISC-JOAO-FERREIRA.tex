@@ -1,0 +1,611 @@
+% !TeX encoding = UTF-8
+% !TeX spellcheck = pt_BR
+% !TeX root = 20201-CODDISC-JOAO-FERREIRA.tex
+% ------------------------------------------------------------------------------
+
+% ------------------------------------------------------------------------------
+% Template para aulas da UNINASSAU
+% Autor: João Ferreira da Silva Júnior
+% Versão: 0.1 - 2020-03-27
+% ------------------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------------------
+\documentclass[
+  % ----------------------------------------------------------------------------
+  11pt,
+  % ----------------------------------------------------------------------------
+  % aspectratio=43,
+  aspectratio=169,
+  % ----------------------------------------------------------------------------
+  % Opções do pacote babel
+  english,                    % idioma adicional para hifenização
+  french,                     % idioma adicional para hifenização
+  spanish,                    % idioma adicional para hifenização
+  brazil                      % o último idioma é o principal do documento
+  ]{beamer}
+% ------------------------------------------------------------------------------
+
+
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% Configurações visuais e de tema
+
+% Extend beamer and a0poster for custom sized posters
+%\usepackage[%
+%  orientation=landscape,
+%  size=custom,
+%  width=16,
+%  height=9,
+%  scale=0.5
+%  ]{beamerposter}
+
+% Configura o avanço do slide para passos a cada objeto ou parágrafo do frame
+\usepackage{beamerthemesplit}
+
+% This command allows you to specify in a quite general way how a covered item should be rendered
+\setbeamercovered{transparent}
+
+% Navigation symbols are small icons that are shown on every slide by default
+\setbeamertemplate{navigation symbols}{}
+
+% Configura o tema e a cor
+\usetheme{AnnArbor}
+\usecolortheme{default}
+\usefonttheme{default}
+% ------------------------------------------------------------------------------
+% Definição de cores
+\definecolor{black}{rgb}{0.0, 0.0, 0.0}
+\definecolor{white}{rgb}{255,255,255}
+\definecolor{red}{rgb}{255,0,0}
+\definecolor{green}{rgb}{0,255,0}
+\definecolor{blue}{rgb}{0,0,255}
+% ------------------------------------------------------------------------------
+% Define a aparência dos blocks
+\setbeamertemplate{blocks}[default]
+% ------------------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% Pacotes principais
+
+% accept different input encodings (conversão automática dos acentos)
+\usepackage[utf8]{inputenc}
+
+% standard package for selecting font encodings
+\usepackage[T1]{fontenc}
+% ------------------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% Pacotes extras
+
+% the package provides several macros to adjust boxed content
+\usepackage{adjustbox}
+
+% an extended set of fonts for use in mathematics
+\usepackage{amsfonts}
+
+% extension package for LaTeX that provides various features to facilitate writing math formulas and to improve the typographical quality of their output
+\usepackage{amsmath}
+
+% math symbols defined by LaTeX package
+\usepackage{amssymb}
+
+% Create PDF and SVG animations from graphics files and inline graphics
+% \usepackage{animate}
+
+% draw dash-lines in array/tabular environments
+% \usepackage{arydshln}
+
+% manages culturally-determined typographical (and other) rules, and hyphenation patterns for a wide range of languages
+\usepackage[english,portuguese]{babel}
+  \newcommand{\ingles}[1]{\foreignlanguage{english}{\emph{#1}}}
+  \newcommand{\frances}[1]{\foreignlanguage{french}{\emph{#1}}}
+  % \newcommand{\grego}[1]{\foreignlanguage{greek}{\emph{#1}}}
+  \newcommand{\grego}[1]{\emph{#1}}
+  \newcommand{\espanhol}[1]{\foreignlanguage{spanish}{\emph{#1}}}
+  \newcommand{\portugues}[1]{\foreignlanguage{brazil}{\emph{#1}}}
+
+% a symbol (dingbat) font and LaTeX macros for its use
+% \usepackage{bbding}
+
+% enhances the quality of tables in LATEX, providing extra commands as well as behind-the-scenes optimisation
+\usepackage{booktabs}
+
+% adding colors to your text is supported by the color package
+\usepackage{color}
+
+% gives you Courier scaled at its normal size as the default Typewriter Font
+% \usepackage{courier}
+
+% this package provides user control over the layout of the three basic list environments: enumerate, itemize and description
+% http://linorg.usp.br/CTAN/macros/latex/contrib/enumitem/enumitem.pdf
+% \usepackage{enumitem}
+
+% enhanced support for graphics
+\usepackage{graphicx}
+
+% is used to handle cross-referencing commands in LaTeX to produce hypertext links in the document
+\usepackage{hyperref}
+
+% this package gives you easy access to the Lorem Ipsum dummy text
+\usepackage{lipsum}
+
+% enables the user to typeset programs (programming code) within LATEX
+\usepackage{listings}
+  \lstset{postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{gray}\hookrightarrow\space}}}
+  % Aqui tem um exemplo: https://github.com/abntex/abntex2/wiki/HowToFormatarCodigoFonte
+  % https://tex.stackexchange.com/questions/64839/how-to-change-listing-caption
+
+  % Listing -> Algorithm
+  \renewcommand{\lstlistingname}{Algoritmo}
+
+  % List of Listings -> List of Algorithms
+  \renewcommand{\lstlistlistingname}{Lista de algoritmos}
+
+% the Latin Modern family of fonts
+\usepackage{lmodern}
+
+% Multimedia inclusion package with Adobe Reader-9/X compatibility
+% http://repositorios.cpai.unb.br/ctan/macros/latex/contrib/media9/doc/media9.pdf
+\usepackage{media9}
+
+% subliminal refinements towards typographical perfection
+\usepackage{microtype}
+
+% Multimedia inclusion package
+% Substituído pelo media9
+%\usepackage{movie15}
+% \newcommand{\pdfmovie}[4]{\href{run:#1}{\framebox{\parbox[c][#3][c]{#2}{\center #4}}}}
+
+% multicol defines a multicols environment which typesets text in multiple columns (up to a maximum of 10)
+\usepackage{multicol}
+
+% create tabular cells spanning multiple rows
+\usepackage{multirow}
+
+% provides some new list environments. Itemized and enumerated lists can be typesetted within paragraphs
+\usepackage{paralist}
+
+% draws high--quality function plots in normal or logarithmic scaling with a user-friendly interface directly in TeX
+\usepackage{pgfplots}
+
+% This package reads tab-separated numerical tables from input and generates code for pretty-printed LATEX-tabulars
+\usepackage{pgfplotstable}
+  \pgfplotsset{compat=1.14}
+
+% provides the means to draw pie (and variant) charts, using PGF/TikZ
+\usepackage{pgf-pie}
+
+% this package simplifies the inclusion of external multi-page PDF documents in LaTeX documents
+\usepackage{pdfpages}
+
+% defines new commands \Centering, \RaggedLeft, and \RaggedRight and new environments Center, FlushLeft, and FlushRight, which set ragged text and are easily configurable to allow hyphenation
+\usepackage{ragged2e}
+
+% makes the page margins visible and hence
+% \usepackage{showframe}
+
+% A comprehensive (SI) units package
+\usepackage{siunitx}
+
+% provides hyphenatable spacing out (letterspacing), underlining, striking out, etc., using the TeX hyphenation algorithm to find the proper hyphens automatically
+  \usepackage{soul}
+  \makeatletter
+  \let\HL\hl
+  \renewcommand\hl{%
+    \let\set@color\beamerorig@set@color
+    \let\reset@color\beamerorig@reset@color
+    \HL}
+  \makeatother
+
+% permit use of UTF-8 characters in soul
+\usepackage{soulutf8}
+
+% inclusão de Subfiguras https://www.ctan.org/pkg/subfig
+\usepackage{subfig}
+
+% for creating graphics programmatically
+\usepackage{tikz}
+  \usetikzlibrary{arrows,automata,shadows}
+
+% select Adobe Times Roman (or equivalent) as default font
+% \usepackage{times}
+
+% Using a color stack for transparency with pdfTEX
+\usepackage{transparent}
+
+% provides many glyphs like male and female symbols and astronomical symbols, as well as the complete lasy font set and other odds and ends
+\usepackage{wasysym}
+
+% font handwrite
+\usepackage{wedn}
+  % inline font modify
+  \newcommand{\setfont}[2]{{\fontfamily{#1}\selectfont #2}}
+  % Usage
+  %\setfont{wedn}{Texto...}
+
+% adding colors to your text is supported by the color package
+\usepackage{xcolor}
+% ------------------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% Pacotes ABNTEX
+
+% citações padrão ABNT
+\usepackage[alf]{abntex2cite}
+% ------------------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% Macros do documento
+\def\universidade{UNINASSAU}
+
+\def\idcurso{31}
+\def\curso{Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas}
+
+\def\iddisciplina{CODDISC}
+\def\disciplina{Nome da Disciplina}
+
+\def\professor{João Ferreira da Silva Júnior}
+\def\professorfoto{img/sec01/professor.png}
+\def\professoremail{joaoferreirape@gmail.com}
+\def\professorsite{https://joaoferreirape.wordpress.com}
+\def\professorlattes{http://lattes.cnpq.br/8904695743376784}
+
+\def\semana{}
+\def\diadaaula{}
+\def\mesdaaula{}
+\def\anodaaula{}
+\def\semestre{2020-1}
+% \def\data{\diadaaula~de~\mesdaaula~de~\anodaaula}
+\def\data{Semestre: \semestre}
+
+\title[\iddisciplina]{\textbf{\curso}}
+
+\subtitle{\iddisciplina~---~\disciplina}
+
+\subject{\curso~---~\disciplina~---~\semestre}
+
+\author[SILVA JUNIOR, J. F. $\therefore$]{\href{\professorlattes}{\textbf{\professor}}}
+
+\logo{\includegraphics[height=6ex]{img/logo/brasao.png}}
+
+\institute[UNINASSAU]{\includegraphics[width=40ex]{img/logo/logo.png}}
+
+\date{\data}
+% ------------------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% configurações do pacote hyperref, precisa estar aqui devido as macros de dados do documento
+\makeatletter
+\hypersetup{% http://www.tug.org/applications/hyperref/manual.html#x1-120003.8
+  anchorcolor={black},                      % set color of anchors
+  % backref=false,                            % do bibliographical back references
+  baseurl={\professorlattes},               % set base URL for document
+  urlcolor={black},%{blue},                 % url color link
+  % bookmarks={true},                         % make bookmarks
+  bookmarksnumbered={false},                % put section numbers in bookmarks
+  bookmarksopen={true},                     % open up bookmark tree
+  bookmarksopenlevel={\maxdimen},           % level to which bookmarks are open
+  % bookmarksdepth,                           % <no-value>, <number>, <part,chapter,section,...>
+  bookmarkstype={toc},                      % to specify which ‘toc’ file to mimic
+  % breaklinks={false},                       % allow links to break over lines
+  % citebordercolor=0 1 0,                    % color of border around cites
+  citecolor={black},%{green},               % color of citation links
+  colorlinks={false},
+  % false,                                    % color links
+  % true,                                     % (tex4ht, dviwindo)
+  % debug=false,                              % provide details of anchors defined; same as verbose
+  % destlabel=false,                          % destinations are named by the first \label after the anchor creation
+  draft={false},                            % do not do any hyperlinking
+  % filebordercolor=0 .5 .5,                  % color of border around file links
+  filecolor={black},%{cyan},                % color of file links
+  final={true},                             % opposite of option draft
+  % frenchlinks=false,                        % use small caps instead of color for links
+  % hyperfigures=false,                       % make figures hyper links
+  % hyperfootnotes=true,                      % set up hyperlinked footnotes
+  % hyperindex=true,                          % set up hyperlinked indices
+  % linkbordercolor=1 0 0,                    % color of border around links
+  linkcolor={black},%{red},                 % color of links
+  % linktocpage={false},                      % make page number, not text, be link on TOC, LOF and LOT
+  % menubordercolor=1 0 0,                    % color of border around menu links
+  menucolor={black},%{red},                 % color for menu links
+  pageanchor={true},                        % put an anchor on every page
+  % pagebackref={true},                       % backreference by page number
+  pdfauthor={\professor},                   % text for PDF Author field
+  % pdfborder=0 0 1,                          % width of PDF link border
+  % 0 0 0,                                    % (colorlinks)
+  % pdfcenterwindow=true,                     % position the document window in the center of the screen
+  pdfcreator={LaTeX with hyperref package, feet: \professor},
+  % text for PDF Creator field
+  pdfdisplaydoctitle=true,                  % display document title instead of file name in title bar
+  pdfkeywords={{\universidade};{\curso};{\disciplina};{\professor}},
+  % text for PDF Keywords field
+  pdflang={pt-BR},                          % PDF language identifier (RFC 3066)
+  pdfproducer={\professor},                 % text for PDF Producer field
+  % pdfstartpage=1,                           % page at which PDF document opens
+  pdfsubject={\curso~--~\disciplina~--~\semestre},  % text for PDF Subject field
+  pdftitle={\curso~--~\disciplina~--~\semestre},    % text for PDF Title field
+}
+\makeatother
+% ------------------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\begin{document}
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\section*{Capa Externa}\label{sec:capa-externa}
+
+
+
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}
+  \begin{frame}[plain]
+
+    ~
+
+  \end{frame}
+} % usebackgroundtemplate
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\section*{Capa}\label{sec:capa}
+
+
+
+{\usebackgroundtemplate{{\transparent{0.5}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
+  \begin{frame}[plain,t]
+
+    \centering{}
+
+    \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
+    % \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+    \begin{block}{}
+      \centering{}
+      \huge{\textbf{\MakeUppercase{\curso}}}
+    \end{block}
+
+    \vfill
+
+    \vspace*{0.1\paperheight}
+
+    \vfill
+
+    \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
+    % \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+    \begin{block}{}
+      \centering{}
+      \vspace*{2em}
+      \huge{\textbf{\MakeUppercase{\disciplina}}}
+
+      \small{\textbf{\MakeUppercase{\professor}}}
+      \vspace*{2em}
+    \end{block}
+
+  \end{frame}
+} % usebackgroundtemplate
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\section*{Agenda}\label{sec:agenda}
+
+
+
+\begin{frame}[allowframebreaks,t]\frametitle{Agenda ---}
+% \begin{frame}[t]\frametitle{Agenda}
+
+  \tableofcontents{}
+  % \tableofcontents[sectionstyle=show/hide/shaded,subsectionstyle=show/hide/shaded]
+  % \tableofcontents[sectionstyle=show,subsectionstyle=show]
+  % \tableofcontents[hideallsubsections]
+  % \tableofcontents[currentsection,currentsubsection]
+
+\end{frame}
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\include{20201-CODDISC-SEC01-PROFESSOR}
+
+\include{20201-CODDISC-SEC02-EMENTA}
+
+\include{20201-CODDISC-SEC03-PLANEJAMENTO}
+
+\include{20201-CODDISC-SEC04-AULA01}
+
+\include{20201-CODDISC-SEC05-AULA02}
+
+\include{20201-CODDISC-SEC06-LISTA01}
+
+\include{20201-CODDISC-SEC07-AULA03}
+
+\include{20201-CODDISC-SEC08-AULA04}
+
+\include{20201-CODDISC-SEC09-LISTA02}
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\section[Agradecimento]{Agradecimento}\label{sec:agradecimentos}
+
+
+
+{\usebackgroundtemplate{{\transparent{0.5}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
+  \begin{frame}[plain,t]
+
+    \centering
+
+    \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
+    % \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+    \begin{block}{}
+      \centering{}
+      \Huge{\textbf{Obrigado!}}
+    \end{block}
+
+    \vfill
+
+    \vspace*{0.3\paperheight}
+
+    \vfill
+
+    \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
+    \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+    \begin{block}{\textbf{\professor}}
+      \justifying{}
+      \begin{itemize}
+        \justifying{}
+        \setlength\itemsep{1em}
+        \item \href{mailto:\professoremail}{\professoremail}
+        \item \href{\professorlattes}{\professorlattes}
+        \item \href{professorsite}{\professorsite}
+      \end{itemize}
+    \end{block}
+
+  \end{frame}
+} % usebackgroundtemplate
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\section[Referências]{Referências}\label{sec:referencias}
+
+
+
+{\usebackgroundtemplate{{\transparent{0.5}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-branco.png}}}
+  \begin{frame}[plain,allowframebreaks,t]%\frametitle{Referências ---}
+  % \begin{frame}[plain,t]%\frametitle{Referências}
+    % \bibliographystyle{apalike}
+    \bibliography{library.bib}
+  \end{frame}
+} % usebackgroundtemplate
+
+
+
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+% ------------------------------------------------------------------------------
+\section*{Capa Final}\label{sec:capa-final}
+
+
+
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-branco.png}}
+  \begin{frame}[plain]
+
+    ~
+
+  \end{frame}
+} % usebackgroundtemplate
+
+
+
+\end{document}
