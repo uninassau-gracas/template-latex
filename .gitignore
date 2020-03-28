@@ -274,3 +274,8 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+# Arquivos pessoais de João Ferreira
+library.bib
+ADMcriarLinkLibrary.bat
+criarLinkLibrary.sh
