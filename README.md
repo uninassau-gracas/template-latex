@@ -1,6 +1,8 @@
 # template-latex
 Template para apresentações e aulas na UNINASSAU
 
+![Exemplo](20201-CODDISC-JOAO-FERREIRA.png)
+
 ## Macros do documento
 
 No preâmbulo do documento, no arquivo principal, há as *macros do documento* onde **deve-se** editar o conteúdo das variáveis:
