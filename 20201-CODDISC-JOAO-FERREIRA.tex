@@ -271,7 +271,7 @@
 \def\universidade{UNINASSAU}
 
 \def\idcurso{31}
-\def\curso{Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas}
+\def\curso{Nome do Curso Superior}
 
 \def\iddisciplina{CODDISC}
 \def\disciplina{Nome da Disciplina}
@@ -415,35 +415,35 @@
 
 
 
-{\usebackgroundtemplate{{\transparent{0.5}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
+{\usebackgroundtemplate{{\transparent{0.2}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
   \begin{frame}[plain,t]
 
     \centering{}
 
     \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
     % \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
-    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!50!white}
     \begin{block}{}
       \centering{}
       \huge{\textbf{\MakeUppercase{\curso}}}
     \end{block}
 
-    \vfill
+    \vspace*{\fill}
 
     \vspace*{0.1\paperheight}
 
-    \vfill
+    \vspace*{\fill}
 
     \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
     % \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
-    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!50!white}
     \begin{block}{}
       \centering{}
-      \vspace*{2em}
-      \huge{\textbf{\MakeUppercase{\disciplina}}}
+      \normalsize{\textbf{\MakeUppercase{\disciplina}}}
 
-      \small{\textbf{\MakeUppercase{\professor}}}
-      \vspace*{2em}
+      \vspace*{1ex}
+
+      \footnotesize{\MakeUppercase{\professor}}
     \end{block}
 
   \end{frame}
@@ -465,7 +465,8 @@
 
 
 
-\begin{frame}[allowframebreaks,t]\frametitle{Agenda ---}
+% \begin{frame}[allowframebreaks,t]\frametitle{Agenda ---}
+\begin{frame}[allowframebreaks,t]
 % \begin{frame}[t]\frametitle{Agenda}
 
   \tableofcontents{}
@@ -522,28 +523,28 @@
 
 
 
-{\usebackgroundtemplate{{\transparent{0.5}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
+{\usebackgroundtemplate{{\transparent{0.2}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
   \begin{frame}[plain,t]
 
     \centering
 
     \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
     % \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
-    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!50!white}
     \begin{block}{}
       \centering{}
       \Huge{\textbf{Obrigado!}}
     \end{block}
 
-    \vfill
+    \vspace*{\fill}
 
     \vspace*{0.3\paperheight}
 
-    \vfill
+    \vspace*{\fill}
 
     \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
-    \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
-    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!20!white}
+    \setbeamercolor{block title}{use=structure,fg=black,bg=blue}
+    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!50!white}
     \begin{block}{\textbf{\professor}}
       \justifying{}
       \begin{itemize}
@@ -574,7 +575,7 @@
 
 
 
-{\usebackgroundtemplate{{\transparent{0.5}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-branco.png}}}
+{\usebackgroundtemplate{{\transparent{0.2}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-branco.png}}}
   \begin{frame}[plain,allowframebreaks,t]%\frametitle{Referências ---}
   % \begin{frame}[plain,t]%\frametitle{Referências}
     % \bibliographystyle{apalike}
