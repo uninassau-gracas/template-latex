@@ -1,12 +1,23 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = pt_BR
-% !TeX root = 20201-CODDISC-JOAO-FERREIRA.tex
+% !TeX root = 20222-CODDISC-JOAO-FERREIRA.tex
 % ------------------------------------------------------------------------------
 
 % ------------------------------------------------------------------------------
 % Template para aulas da UNINASSAU
 % Autor: João Ferreira da Silva Júnior
-% Versão: 0.1 - 2020-03-27
+% Versão: 0.4 - 2022-08-19
+% ------------------------------------------------------------------------------
+
+
+
+% ------------------------------------------------------------------------------
+% Procurar texto e alterar texto em arquivos, buscar em todo subdiretório
+% find . -type f -name "*.tex" -exec sed -i 's/TEXTO ORIGINAL/TEXTO NOVO/g' {} +
+% find . -type f -name "*.tex" -exec sed -i 's/Versão: 0.1 - 2020-03-27/Versão: 0.4 - 2022-08-19/g' {} +
+%
+% Procurar padrão no nome e alterar arquivos, buscar em todo subdiretório
+% find . -name '*.*' -print0 | xargs -0 -n1 bash -c 'mv "$0" "${0/PADRÃO ANTIGO/SUBSTITUTO}"'
 % ------------------------------------------------------------------------------
 
 
@@ -16,7 +27,7 @@
   % ----------------------------------------------------------------------------
   11pt,
   % ----------------------------------------------------------------------------
-  % aspectratio=43,
+  %aspectratio=43,
   aspectratio=169,
   % ----------------------------------------------------------------------------
   % Opções do pacote babel
@@ -44,7 +55,7 @@
 %  size=custom,
 %  width=16,
 %  height=9,
-%  scale=0.5
+%  scale=0.45
 %  ]{beamerposter}
 
 % Configura o avanço do slide para passos a cada objeto ou parágrafo do frame
@@ -100,6 +111,9 @@
 % the package provides several macros to adjust boxed content
 \usepackage{adjustbox}
 
+% Algorithm2e is an environment for writing algorithms. An algorithm becomes a floating object (like figure, table, etc.).
+\usepackage{algorithm2e}
+
 % an extended set of fonts for use in mathematics
 \usepackage{amsfonts}
 
@@ -108,6 +122,7 @@
 
 % math symbols defined by LaTeX package
 \usepackage{amssymb}
+\usepackage{fontawesome5}
 
 % Create PDF and SVG animations from graphics files and inline graphics
 % \usepackage{animate}
@@ -125,7 +140,7 @@
   \newcommand{\portugues}[1]{\foreignlanguage{brazil}{\emph{#1}}}
 
 % a symbol (dingbat) font and LaTeX macros for its use
-% \usepackage{bbding}
+\usepackage{bbding}
 
 % enhances the quality of tables in LATEX, providing extra commands as well as behind-the-scenes optimisation
 \usepackage{booktabs}
@@ -270,11 +285,11 @@
 % Macros do documento
 \def\universidade{UNINASSAU}
 
-\def\idcurso{31}
-\def\curso{Nome do Curso Superior}
+\def\idcurso{99}
+\def\curso{Nome do Curso ou Tema}
 
-\def\iddisciplina{CODDISC}
-\def\disciplina{Nome da Disciplina}
+\def\iddisciplina{99}
+\def\disciplina{Nome da Disciplina ou Descrição Detalhada do Tópico em Estudo}
 
 \def\professor{João Ferreira da Silva Júnior}
 \def\professorfoto{img/sec01/professor.png}
@@ -286,17 +301,21 @@
 \def\diadaaula{}
 \def\mesdaaula{}
 \def\anodaaula{}
-\def\semestre{2020-1}
+\def\semestre{2022-2}
 % \def\data{\diadaaula~de~\mesdaaula~de~\anodaaula}
 \def\data{Semestre: \semestre}
 
-\title[\iddisciplina]{\textbf{\curso}}
+%\title[\iddisciplina]{\textbf{\curso}}
+%\title[\iddisciplina]{\textbf{\disciplina}}
+\title[\curso]{\curso}
 
-\subtitle{\iddisciplina~---~\disciplina}
+%\subtitle{\iddisciplina~---~\disciplina}
+\subtitle[\disciplina]{\disciplina}
 
-\subject{\curso~---~\disciplina~---~\semestre}
+\subject{\semestre~---~\curso~---~\disciplina}
 
-\author[SILVA JUNIOR, J. F. $\therefore$]{\href{\professorlattes}{\textbf{\professor}}}
+%\author[SILVA JUNIOR, J. F. $\therefore$]{\href{\professorlattes}{\textbf{\professor}}}
+\author[SILVA JUNIOR, J. F. $\therefore$]{\href{\professorlattes}{\professor}}
 
 \logo{\includegraphics[height=6ex]{img/logo/brasao.png}}
 
@@ -348,7 +367,7 @@
   menucolor={black},%{red},                 % color for menu links
   pageanchor={true},                        % put an anchor on every page
   % pagebackref={true},                       % backreference by page number
-  pdfauthor={\professor},                   % text for PDF Author field
+  pdfauthor={\professor~<\professoremail>}, % text for PDF Author field
   % pdfborder=0 0 1,                          % width of PDF link border
   % 0 0 0,                                    % (colorlinks)
   % pdfcenterwindow=true,                     % position the document window in the center of the screen
@@ -358,10 +377,10 @@
   pdfkeywords={{\universidade};{\curso};{\disciplina};{\professor}},
   % text for PDF Keywords field
   pdflang={pt-BR},                          % PDF language identifier (RFC 3066)
-  pdfproducer={\professor},                 % text for PDF Producer field
+  pdfproducer={\professor~<\professoremail>},   % text for PDF Producer field
   % pdfstartpage=1,                           % page at which PDF document opens
-  pdfsubject={\curso~--~\disciplina~--~\semestre},  % text for PDF Subject field
-  pdftitle={\curso~--~\disciplina~--~\semestre},    % text for PDF Title field
+  pdfsubject={\semestre~---~\curso~---~\disciplina},  % text for PDF Subject field
+  pdftitle={\curso~---~\disciplina},    % text for PDF Title field
 }
 \makeatother
 % ------------------------------------------------------------------------------
@@ -415,36 +434,10 @@
 
 
 
-{\usebackgroundtemplate{{\transparent{0.2}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
+{\usebackgroundtemplate{{\transparent{0.1}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
   \begin{frame}[plain,t]
 
-    \centering{}
-
-    \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
-    % \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
-    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!50!white}
-    \begin{block}{}
-      \centering{}
-      \huge{\textbf{\MakeUppercase{\curso}}}
-    \end{block}
-
-    \vspace*{\fill}
-
-    \vspace*{0.1\paperheight}
-
-    \vspace*{\fill}
-
-    \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
-    % \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
-    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!50!white}
-    \begin{block}{}
-      \centering{}
-      \normalsize{\textbf{\MakeUppercase{\disciplina}}}
-
-      \vspace*{1ex}
-
-      \footnotesize{\MakeUppercase{\professor}}
-    \end{block}
+    \titlepage
 
   \end{frame}
 } % usebackgroundtemplate
@@ -465,9 +458,9 @@
 
 
 
-% \begin{frame}[allowframebreaks,t]\frametitle{Agenda ---}
-\begin{frame}[allowframebreaks,t]
-% \begin{frame}[t]\frametitle{Agenda}
+\begin{frame}[allowframebreaks,t]\frametitle{Agenda ---}
+%\begin{frame}[allowframebreaks,t]
+%\begin{frame}[t]\frametitle{Agenda}
 
   \tableofcontents{}
   % \tableofcontents[sectionstyle=show/hide/shaded,subsectionstyle=show/hide/shaded]
@@ -489,23 +482,29 @@
 % ------------------------------------------------------------------------------
 % ------------------------------------------------------------------------------
 % ------------------------------------------------------------------------------
-\include{20201-CODDISC-SEC01-PROFESSOR}
+\include{20222-CODDISC-SEC01-PROFESSOR}
 
-\include{20201-CODDISC-SEC02-EMENTA}
+\include{20222-CODDISC-SEC02-PLANO}
 
-\include{20201-CODDISC-SEC03-PLANEJAMENTO}
+\include{20222-CODDISC-SEC03-PLANEJAMENTO}
 
-\include{20201-CODDISC-SEC04-AULA01}
+\include{20222-CODDISC-SEC04-INTRODUCAO}
 
-\include{20201-CODDISC-SEC05-AULA02}
+\include{20222-CODDISC-SEC05-TEMA01}
 
-\include{20201-CODDISC-SEC06-LISTA01}
+\include{20222-CODDISC-SEC06-TEMA02}
 
-\include{20201-CODDISC-SEC07-AULA03}
+\include{20222-CODDISC-SEC07-TEMA03}
 
-\include{20201-CODDISC-SEC08-AULA04}
+\include{20222-CODDISC-SEC08-TEMA04}
 
-\include{20201-CODDISC-SEC09-LISTA02}
+\include{20222-CODDISC-SEC09-TEMA05}
+
+\include{20222-CODDISC-SEC10-LISTAS}
+
+\include{20222-CODDISC-SEC11-SEMINARIOS}
+
+\include{20222-CODDISC-SEC12-PROJETOS}
 
 
 
@@ -526,26 +525,17 @@
 {\usebackgroundtemplate{{\transparent{0.2}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
   \begin{frame}[plain,t]
 
-    \centering
+    \vfill
+    \vspace*{0.15\paperheight}
 
-    \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
-    % \setbeamercolor{block title}{use=structure,fg=white,bg=blue}
-    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!50!white}
-    \begin{block}{}
-      \centering{}
+    \begin{center}
       \Huge{\textbf{Obrigado!}}
-    \end{block}
+    \end{center}
 
-    \vspace*{\fill}
+    \vspace*{0.15\paperheight}
+    \vfill
 
-    \vspace*{0.3\paperheight}
-
-    \vspace*{\fill}
-
-    \addtobeamertemplate{block begin}{\pgfsetfillopacity{0.5}}{\pgfsetfillopacity{1}}
-    \setbeamercolor{block title}{use=structure,fg=black,bg=blue}
-    \setbeamercolor{block body}{use=structure,fg=black,bg=blue!50!white}
-    \begin{block}{\textbf{\professor}}
+    \begin{block}{\professor}
       \justifying{}
       \begin{itemize}
         \justifying{}
@@ -575,11 +565,17 @@
 
 
 
-{\usebackgroundtemplate{{\transparent{0.2}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-branco.png}}}
+{\usebackgroundtemplate{{\transparent{0.1}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
   \begin{frame}[plain,allowframebreaks,t]%\frametitle{Referências ---}
-  % \begin{frame}[plain,t]%\frametitle{Referências}
+  % \begin{frame}[plain,t]\frametitle{Referências}
+
+    \begin{center}
+      \Huge{\textbf{Referências}}
+    \end{center}
+
     % \bibliographystyle{apalike}
-    \bibliography{library.bib}
+    \bibliography{library}
+
   \end{frame}
 } % usebackgroundtemplate
 
