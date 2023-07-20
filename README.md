@@ -2,7 +2,7 @@
 
 Template para apresentações e aulas na UNINASSAU.
 
-![Exemplo](20231-CODDISC-JOAO-FERREIRA.png)
+![Exemplo](20232-CODDISC-JOAO-FERREIRA.png)
 
 ## Macros do documento
 
@@ -56,7 +56,7 @@ Ao mudar o nome do arquivo principal, deverá ser atualizada a *magic quote* no 
 <pre>
 % !TeX encoding = UTF-8
 % !TeX spellcheck = pt_BR
-% !TeX root = 20231-CODDISC-JOAO-FERREIRA.tex
+% !TeX root = 20232-CODDISC-JOAO-FERREIRA.tex
 % ------------------------------------------------------------------------------
 </pre>
 
