@@ -1,12 +1,12 @@
 % !TeX encoding = UTF-8
 % !TeX spellcheck = pt_BR
-% !TeX root = 20231-CODDISC-JOAO-FERREIRA.tex
+% !TeX root = 20232-CODDISC-JOAO-FERREIRA.tex
 % ------------------------------------------------------------------------------
 
 % ------------------------------------------------------------------------------
 % Template para aulas da UNINASSAU
 % Autor: João Ferreira da Silva Júnior
-% Versão: 0.4.3 - 2023-02-04
+% Versão: 0.4.5 - 2023-09-17
 % ------------------------------------------------------------------------------
 
 
@@ -14,7 +14,7 @@
 % ------------------------------------------------------------------------------
 % Procurar texto e alterar texto em arquivos, buscar em todo subdiretório
 % find . -type f -name "*.tex" -exec sed -i 's/TEXTO ORIGINAL/TEXTO NOVO/g' {} +
-% find . -type f -name "*.tex" -exec sed -i 's/Versão: 0.1 - 2020-03-27/Versão: 0.4.3 - 2023-02-04/g' {} +
+% find . -type f -name "*.tex" -exec sed -i 's/Versão: 0.1 - 2020-03-27/Versão: 0.4.5 - 2023-09-17/g' {} +
 %
 % Procurar padrão no nome e alterar arquivos, buscar em todo subdiretório
 % find . -name '*.*' -print0 | xargs -0 -n1 bash -c 'mv "$0" "${0/PADRÃO ANTIGO/SUBSTITUTO}"'
@@ -68,8 +68,8 @@
 \setbeamertemplate{navigation symbols}{}
 
 % Configura o tema e a cor
-\usetheme{AnnArbor}
-\usecolortheme{default}
+\usetheme{Madrid} % Madrid
+\usecolortheme{seahorse} % seahorse
 \usefonttheme{default}
 % ------------------------------------------------------------------------------
 % Definição de cores
@@ -301,7 +301,7 @@
 \def\diadaaula{}
 \def\mesdaaula{}
 \def\anodaaula{}
-\def\semestre{2023-1}
+\def\semestre{2023-2}
 % \def\data{\diadaaula~de~\mesdaaula~de~\anodaaula}
 \def\data{Semestre: \semestre}
 
@@ -410,7 +410,7 @@
 
 
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-1.png}}
   \begin{frame}[plain]
 
     ~
@@ -434,7 +434,7 @@
 
 
 
-{\usebackgroundtemplate{{\transparent{0.1}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
+{\usebackgroundtemplate{{\transparent{0.1}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-1.png}}}
   \begin{frame}[plain,t]
 
     \titlepage
@@ -482,29 +482,29 @@
 % ------------------------------------------------------------------------------
 % ------------------------------------------------------------------------------
 % ------------------------------------------------------------------------------
-\include{20231-CODDISC-SEC01-PROFESSOR}
+\include{20232-CODDISC-SEC01-PROFESSOR}
 
-\include{20231-CODDISC-SEC02-PLANO}
+\include{20232-CODDISC-SEC02-PLANO}
 
-\include{20231-CODDISC-SEC03-PLANEJAMENTO}
+\include{20232-CODDISC-SEC03-PLANEJAMENTO}
 
-\include{20231-CODDISC-SEC04-INTRODUCAO}
+\include{20232-CODDISC-SEC04-INTRODUCAO}
 
-\include{20231-CODDISC-SEC05-TEMA01}
+\include{20232-CODDISC-SEC05-TEMA01}
 
-\include{20231-CODDISC-SEC06-TEMA02}
+\include{20232-CODDISC-SEC06-TEMA02}
 
-\include{20231-CODDISC-SEC07-TEMA03}
+\include{20232-CODDISC-SEC07-TEMA03}
 
-\include{20231-CODDISC-SEC08-TEMA04}
+\include{20232-CODDISC-SEC08-TEMA04}
 
-\include{20231-CODDISC-SEC09-TEMA05}
+\include{20232-CODDISC-SEC09-TEMA05}
 
-\include{20231-CODDISC-SEC10-LISTAS}
+\include{20232-CODDISC-SEC10-LISTAS}
 
-\include{20231-CODDISC-SEC11-SEMINARIOS}
+\include{20232-CODDISC-SEC11-SEMINARIOS}
 
-\include{20231-CODDISC-SEC12-PROJETOS}
+\include{20232-CODDISC-SEC12-PROJETOS}
 
 
 
@@ -522,7 +522,7 @@
 
 
 
-{\usebackgroundtemplate{{\transparent{0.2}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
+{\usebackgroundtemplate{{\transparent{0.2}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-1.png}}}
   \begin{frame}[plain,t]
 
     \vfill
@@ -565,7 +565,7 @@
 
 
 
-{\usebackgroundtemplate{{\transparent{0.1}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-amarelo.png}}}
+{\usebackgroundtemplate{{\transparent{0.1}\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-1.png}}}
   \begin{frame}[plain,allowframebreaks,t]%\frametitle{Referências ---}
   % \begin{frame}[plain,t]\frametitle{Referências}
 
@@ -595,7 +595,7 @@
 
 
 
-{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-branco.png}}
+{\usebackgroundtemplate{\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{img/logo/background-3.png}}
   \begin{frame}[plain]
 
     ~
