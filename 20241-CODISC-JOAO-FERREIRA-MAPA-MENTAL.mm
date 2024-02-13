@@ -1,9 +1,9 @@
 <map version="1.1.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node COLOR="#000000" CREATED="1631469347218" ID="ID_660139729" MODIFIED="1631469380390" TEXT="Modelo">
+<node COLOR="#000000" CREATED="1631469347218" ID="ID_660139729" MODIFIED="1695841126766" STYLE="fork" TEXT="Modelo">
 <font NAME="SansSerif" SIZE="20"/>
 <hook NAME="accessories/plugins/AutomaticLayout.properties"/>
-<node COLOR="#0033ff" CREATED="1631469384175" FOLDED="true" ID="ID_768294769" MODIFIED="1660956561034" POSITION="right" TEXT="Abertura">
+<node COLOR="#0033ff" CREATED="1631469384175" FOLDED="true" ID="ID_768294769" MODIFIED="1695841193762" POSITION="right" TEXT="Abertura">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -47,7 +47,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469368475" FOLDED="true" ID="ID_316699592" MODIFIED="1660956562400" POSITION="right" TEXT="Agenda">
+<node COLOR="#0033ff" CREATED="1631469368475" FOLDED="true" ID="ID_316699592" MODIFIED="1695841195448" POSITION="right" TEXT="Agenda">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -61,7 +61,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631470402544" FOLDED="true" ID="ID_7667073" MODIFIED="1661017164780" POSITION="right" TEXT="SEC01 - Professor">
+<node COLOR="#0033ff" CREATED="1631470402544" FOLDED="true" ID="ID_7667073" MODIFIED="1695841199054" POSITION="right" TEXT="SEC01 - Professor">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -86,7 +86,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469362349" FOLDED="true" ID="ID_1697364325" MODIFIED="1661017167308" POSITION="right" TEXT="SEC02 - Plano de Ensino">
+<node COLOR="#0033ff" CREATED="1631469362349" FOLDED="true" ID="ID_1697364325" MODIFIED="1695841126762" POSITION="right" TEXT="SEC02 - Plano de Ensino">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -132,7 +132,7 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469443486" FOLDED="true" ID="ID_1896496213" MODIFIED="1661017172164" POSITION="right" TEXT="SEC03 - Planejamento">
+<node COLOR="#0033ff" CREATED="1631469443486" FOLDED="true" ID="ID_1896496213" MODIFIED="1695841126762" POSITION="right" TEXT="SEC03 - Planejamento">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -204,7 +204,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469453556" FOLDED="true" ID="ID_1369001382" MODIFIED="1661022460998" POSITION="right" TEXT="SEC04 - Introdu&#xe7;&#xe3;o da Disciplina">
+<node COLOR="#0033ff" CREATED="1631469453556" FOLDED="true" ID="ID_1369001382" MODIFIED="1695841126763" POSITION="right" TEXT="SEC04 - Introdu&#xe7;&#xe3;o da Disciplina">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -219,7 +219,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469674573" FOLDED="true" ID="ID_1905238469" MODIFIED="1661022462663" POSITION="right" TEXT="SEC05 - Tema 01">
+<node COLOR="#0033ff" CREATED="1631469674573" FOLDED="true" ID="ID_1905238469" MODIFIED="1695841126763" POSITION="right" TEXT="SEC05 - Tema 01">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -239,7 +239,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469685144" FOLDED="true" ID="ID_270163365" MODIFIED="1661022463551" POSITION="right" TEXT="SEC06 - Tema 02">
+<node COLOR="#0033ff" CREATED="1631469685144" FOLDED="true" ID="ID_270163365" MODIFIED="1695841126763" POSITION="right" TEXT="SEC06 - Tema 02">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -259,7 +259,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469689893" FOLDED="true" ID="ID_31002556" MODIFIED="1661022464303" POSITION="right" TEXT="SEC07 - Tema 03">
+<node COLOR="#0033ff" CREATED="1631469689893" FOLDED="true" ID="ID_31002556" MODIFIED="1695841126763" POSITION="right" TEXT="SEC07 - Tema 03">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -279,7 +279,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469689893" FOLDED="true" ID="ID_123341059" MODIFIED="1661022465103" POSITION="right" TEXT="SEC08 - Tema 04">
+<node COLOR="#0033ff" CREATED="1631469689893" FOLDED="true" ID="ID_123341059" MODIFIED="1695841126763" POSITION="right" TEXT="SEC08 - Tema 04">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -299,7 +299,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469689893" FOLDED="true" ID="ID_1901563617" MODIFIED="1661022467186" POSITION="right" TEXT="SEC09 - Tema 05">
+<node COLOR="#0033ff" CREATED="1631469689893" FOLDED="true" ID="ID_1901563617" MODIFIED="1695841126763" POSITION="right" TEXT="SEC09 - Tema 05">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -319,7 +319,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1661017206335" FOLDED="true" ID="ID_315681663" MODIFIED="1661022882945" POSITION="right" TEXT="SEC10 - Listas de Exerc&#xed;cios">
+<node COLOR="#0033ff" CREATED="1661017206335" FOLDED="true" ID="ID_315681663" MODIFIED="1695841126763" POSITION="right" TEXT="SEC10 - Listas de Exerc&#xed;cios">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -334,7 +334,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1661017134626" FOLDED="true" ID="ID_1910355867" MODIFIED="1661026625560" POSITION="right" TEXT="SEC11 - Semin&#xe1;rios">
+<node COLOR="#0033ff" CREATED="1661017134626" FOLDED="true" ID="ID_1910355867" MODIFIED="1695841126763" POSITION="right" TEXT="SEC11 - Semin&#xe1;rios">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -349,7 +349,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1661017229832" FOLDED="true" ID="ID_1813679992" MODIFIED="1661027182191" POSITION="right" TEXT="SEC12 - Projetos">
+<node COLOR="#0033ff" CREATED="1661017229832" FOLDED="true" ID="ID_1813679992" MODIFIED="1695841126763" POSITION="right" TEXT="SEC12 - Projetos">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -369,7 +369,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469693164" FOLDED="true" ID="ID_1518404298" MODIFIED="1661011374522" POSITION="right" TEXT="Agradecimento">
+<node COLOR="#0033ff" CREATED="1631469693164" FOLDED="true" ID="ID_1518404298" MODIFIED="1695841126763" POSITION="right" TEXT="Agradecimento">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
@@ -391,10 +391,101 @@
 </node>
 </node>
 </node>
-<node COLOR="#0033ff" CREATED="1631469696934" ID="ID_345075612" MODIFIED="1661011373645" POSITION="right" TEXT="Refer&#xea;ncias">
+<node COLOR="#0033ff" CREATED="1631469696934" ID="ID_345075612" MODIFIED="1695841126763" POSITION="right" TEXT="Refer&#xea;ncias">
 <edge STYLE="sharp_bezier" WIDTH="8"/>
 <font NAME="SansSerif" SIZE="18"/>
 <icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#0033ff" CREATED="1695841130213" ID="ID_818838320" MODIFIED="1695841147728" POSITION="left" TEXT="Introdu&#xe7;&#xe3;o">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+</node>
+<node COLOR="#0033ff" CREATED="1695841148651" ID="ID_1665534558" MODIFIED="1695841154903" POSITION="left" TEXT="Tema 01">
+<edge STYLE="sharp_bezier" WIDTH="8"/>
+<font NAME="SansSerif" SIZE="18"/>
+<node COLOR="#00b439" CREATED="1631469384175" ID="ID_1274226697" MODIFIED="1695841321747" TEXT="Abertura">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="button_ok"/>
+<node COLOR="#990000" CREATED="1631469512829" ID="ID_115971878" MODIFIED="1695841230212" TEXT="Slide 1">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+<icon BUILTIN="button_ok"/>
+<node COLOR="#111111" CREATED="1631469403125" ID="ID_1675660536" MODIFIED="1695841230212" TEXT="UNINASSAU imagem banner">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node COLOR="#990000" CREATED="1631469507228" ID="ID_1001890396" MODIFIED="1695841230212" TEXT="Slide 2">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+<icon BUILTIN="button_ok"/>
+<node COLOR="#111111" CREATED="1631469403125" ID="ID_967954536" MODIFIED="1695841230212" TEXT="UNINASSAU imagem banner desfocada">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1631469419107" ID="ID_639540563" MODIFIED="1695841230212" TEXT="NOME DO CURSO OU TEMA">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1631469424947" ID="ID_883143384" MODIFIED="1695841230212" TEXT="NOME DA DISCIPLINA OU DESCRI&#xc7;&#xc3;O DETALHADA">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1631469431216" ID="ID_1807374827" MODIFIED="1695841230212" TEXT="NOME DO PROFESSOR">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#111111" CREATED="1660956540283" ID="ID_1219126944" MODIFIED="1695841230213" TEXT="INSTITUI&#xc7;&#xc3;O">
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1631469368475" FOLDED="true" ID="ID_1290495624" MODIFIED="1695841218772" TEXT="Agenda">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="button_ok"/>
+<node COLOR="#990000" CREATED="1631469571251" ID="ID_507063009" MODIFIED="1695841218772" TEXT="Se&#xe7;&#xe3;o">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+<icon BUILTIN="button_ok"/>
+<node COLOR="#111111" CREATED="1631469574780" ID="ID_1338985031" MODIFIED="1695841218772" TEXT="Sub-se&#xe7;&#xe3;o">
+<font NAME="SansSerif" SIZE="12"/>
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node COLOR="#00b439" CREATED="1631470402544" FOLDED="true" ID="ID_1962569508" MODIFIED="1695841220664" TEXT="SEC01 - Professor">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="16"/>
+<icon BUILTIN="button_ok"/>
+<node COLOR="#990000" CREATED="1631470819934" ID="ID_1390943421" MODIFIED="1695841206647" TEXT="Foto">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#990000" CREATED="1631470825424" ID="ID_1007131319" MODIFIED="1695841206647" TEXT="Links">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#990000" CREATED="1631470827303" ID="ID_599604083" MODIFIED="1695841206647" TEXT="Forma&#xe7;&#xe3;o">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+<icon BUILTIN="button_ok"/>
+</node>
+<node COLOR="#990000" CREATED="1631470834272" ID="ID_686505616" MODIFIED="1695841206647" TEXT="Atua&#xe7;&#xe3;o">
+<edge STYLE="bezier" WIDTH="thin"/>
+<font NAME="SansSerif" SIZE="14"/>
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
 </node>
 </node>
 </map>
